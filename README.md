@@ -1,3 +1,3 @@
-# RAS Group 8 Template
+# RAS Group 8 Platform
 
-Template used for new packages. The structure is in large part inspired by [this repository](https://github.com/ethz-asl/ros_best_practices).
+Platform specific configuration and services. Use this packade to store all platform specific information, such as dimensions and other physical properties.

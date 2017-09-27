@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ras_group8_template)
+project(ras_group8_platform)
 
 find_package(catkin REQUIRED
   COMPONENTS
   roscpp
-  phidgets
 )
 
 catkin_package(
@@ -13,7 +12,6 @@ catkin_package(
 
   CATKIN_DEPENDS
     roscpp
-    phidgets
 
 # DEPENDS
 )
@@ -24,8 +22,8 @@ include_directories(
 )
 
 add_executable(${PROJECT_NAME}
-  src/template_node.cpp
-  src/Template.cpp
+  src/platform_node.cpp
+  src/Platform.cpp
 )
 
 add_dependencies(${PROJECT_NAME}
@@ -36,7 +34,7 @@ target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 
-catkin_add_gtest(template_tests test/test_template.cpp src/Template.cpp)
+catkin_add_gtest(platform_tests test/test_platform.cpp src/Platform.cpp)
 
 # Make main executable
 install(
