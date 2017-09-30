@@ -12,9 +12,6 @@ Platform::Platform(ros::NodeHandle& nodeHandle)
     ROS_ERROR("Could not read parameters.");
     ros::requestShutdown();
   }
-  
-  subscriber_ = nodeHandle_.subscribe(subscriberTopic_, 1,
-                                      &Platform::topicCallback, this);
 
   ROS_INFO("Successfully launched node.");
 }
@@ -25,13 +22,10 @@ Platform::~Platform()
 
 bool Platform::readParameters()
 {
-  if (!nodeHandle_.getParam("subscriber_topic", subscriberTopic_)) return false;
+  if (!nodeHandle_.getParam("wheel_radius", wheelRadius)) return false;
+  if (!nodeHandle_.getParam("wheel_distance", wheelDistance)) return false;
+  
   return true;
 }
-
-void Platform::topicCallback(const phidgets::motor_encoder& msg)
-{
-}
-
 
 } /* namespace */
