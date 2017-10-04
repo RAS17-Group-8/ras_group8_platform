@@ -20,7 +20,7 @@ private:
   /* Parameters
    */
   double wheelRadius;
-  double wheelBase;
+  double wheelDistance;
 };
 
 } /* namespace */
