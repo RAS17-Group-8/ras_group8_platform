@@ -1,3 +1,3 @@
 wheel_radius: 0.03
 wheel_distance: 0.23
-encoder_tics_per_rev: 897.96
+wheel_encoder_tics_per_rev: 897.96
