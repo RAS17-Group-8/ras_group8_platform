@@ -3,8 +3,7 @@
   <!-- Launch RAS Group 8 Template Node -->
   <node pkg="ras_group8_platform"
        type="ras_group8_platform"
-       name="platform"
-     output="screen">
+       name="platform">
     <rosparam command="load" file="$(find ras_group8_platform)/config/default.yaml" />
   </node>
 
