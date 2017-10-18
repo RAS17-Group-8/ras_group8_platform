@@ -34,8 +34,6 @@ target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 
-catkin_add_gtest(platform_tests test/test_platform.cpp src/Platform.cpp)
-
 # Make main executable
 install(
   TARGETS ${PROJECT_NAME}

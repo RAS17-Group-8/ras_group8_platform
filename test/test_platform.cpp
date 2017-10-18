@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <ras_group8_template/Platform.hpp>
+#include <ras_group8_platform/Platform.hpp>
 
 int main(int argc, char **argv)
 {
